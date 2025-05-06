@@ -12,6 +12,7 @@ export const router = createBrowserRouter([
       {index: true, Component: GlobalFeed},
       {path: 'articles/:slug', Component: Article},
       {path: '/login', Component: Authentication},
+      {path: '/register', Component: Authentication},
     ],
   },
 ])

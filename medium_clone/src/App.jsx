@@ -1,12 +1,16 @@
 import {Outlet} from 'react-router'
 import TopBar from './components/topbar'
+import {CurrentUserProvider} from './contexts/currentUser'
+import CurrentUserChecker from './components/currentUserChecker'
 
 function App() {
   return (
-    <>
-      <TopBar />
-      <Outlet />
-    </>
+    <CurrentUserProvider>
+      <CurrentUserChecker>
+        <TopBar />
+        <Outlet />
+      </CurrentUserChecker>
+    </CurrentUserProvider>
   )
 }
 
